@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
 import { useContext, useEffect, useState } from "react";
 import { assets } from "../assets/assets";
+import RelatedProducts from "../components/RelatedProducts";
 
 export default function Product() {
 
@@ -86,6 +87,9 @@ export default function Product() {
                     <p>
                         E-commerce websites typically display products or services along with detailed descriptions, images, prices, and any available variations (e.g., sizes, colors). Each product usually has its own dedicated page with relevant information.
                     </p>
+                </div>
+                <div>
+                    <RelatedProducts category={productsData.category}  subCategory={productsData.subCategory}/>
                 </div>
             </div>
 

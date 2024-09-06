@@ -4,11 +4,11 @@ import { NavLink, Link } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext'
 
 export default function Navbar() {
-    const { showSearch, setShowSearch } = useContext(ShopContext)
+    const { showSearch, setShowSearch, getCartCount } = useContext(ShopContext)
     const [visible, setVisible] = useState(false)
 
     return (
-        <div className="flex irems-center justify-between py-5 font-medium">
+        <div className="flex items-center justify-between py-5 font-medium">
             <img src={assets.logo} alt="Logo" className='w-36' />
 
             <ul className='hidden sm:flex gap-5 text-sm text-gray-700'>
@@ -48,7 +48,7 @@ export default function Navbar() {
 
                 <Link to="/cart" className='relative'>
                     <img src={assets.cart_icon} alt="image" className='w-5 cursor-pointer' />
-                    <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]'>99</p>
+                    <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]'>{getCartCount()}</p>
                 </Link>
 
                 <img onClick={() => { setVisible(true) }} src={assets.menu_icon} alt="image" className='w-5 cursor-pointer sm:hidden' />

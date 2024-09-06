@@ -26,7 +26,7 @@ export default function Footer() {
             </div>
             <div>
                 <hr />
-                <p className="py-5 text-sm text-center">Copyright {new Date().getFullYear()}@ greatstack.dev - All Right Reserved.</p>
+                <p className="py-5 text-sm text-center">Copyright {new Date().getFullYear()}@ Karim Kashkoush - All Right Reserved.</p>
             </div>
         </div>
     )
